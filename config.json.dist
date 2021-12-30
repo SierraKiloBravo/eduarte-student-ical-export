@@ -1,0 +1,11 @@
+{
+    "driver": "firefox",
+    "authentication": {
+        "type": "o365",
+        "username": "student@example.org",
+        "password": "3xAmPl3stuDENT!"
+    },
+    "endpoint": "https://fictional-school.educus.nl",
+    "readahead_weeks": 5,
+    "output": "calendar.ics"
+}

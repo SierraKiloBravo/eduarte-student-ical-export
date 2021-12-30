@@ -1,0 +1,5 @@
+.vscode/
+geckodriver.log
+*.pyc
+__pycache__/
+config.json

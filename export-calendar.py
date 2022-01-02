@@ -181,7 +181,7 @@ for entry in calendaritems:
         "^(\d?\d:\d\d) - (\d?\d:\d\d) uur \(lesuur (\d+) ?t?/?m? ?(\d+)?\)$", entry['time'])
     if not match_time_re:
         # There is a better way to do this. I couldn't find that way in time though.
-        match_time_parse = re.match(
+        match_time_re = re.match(
             "^(\d?\d:\d\d) - (\d?\d:\d\d) uur()()$", entry['time'])
         # Appointments are not attached to 'lesuren'. If this is an appointment, the string
         # will only look like '13:37 - 15:37 uur'. The two empty capture groups are there

@@ -63,7 +63,7 @@ for x in range(1, int(config['readahead_weeks'])):
         date_entry.send_keys(Keys.BACKSPACE)
     date_entry.send_keys(first_monday_of_week.strftime("%d-%m-%Y"))
     date_entry.send_keys(Keys.RETURN)
-    sleep(0.3)
+    sleep(1)
     days = driver.find_elements_by_class_name("agenda--day")
 
     weekday = 0  # Start on the current day
@@ -80,8 +80,8 @@ for x in range(1, int(config['readahead_weeks'])):
             course_meta = {'date': str(current_date)}
 
             course.click()
-            # Clicking on a course makes a popup open. Its class is 'ide'.
-            course_popover = driver.find_element(By.XPATH, '//*[@id="ide"]')
+            # Clicking on a course makes a popup open. Its class is 'id14'.
+            course_popover = driver.find_element(By.XPATH, '//*[@id="id14"]')
             course_popover_title = driver.find_element(
                 By.CLASS_NAME, 'popover-title').find_element(By.TAG_NAME, 'h2').text
             course_popover_content = driver.find_element(
